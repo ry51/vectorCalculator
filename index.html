@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Calculator</title>
+	
+	<style>
+		* { font-family: helvetica; }
+		body { margin: 25px; }
+		p { display: inline; }
+	</style>
+</head>
+<body>
+	<h1>Vector Calculator In Three Dimensions</h1>
+	<h3>A simple tool to calculate the angle between two vectors along with their dot and cross products.</h3>
+	<p>Welcome to Vector Calculator! This program calculates both the dot and cross products of a pair of vectors in three dimensions, as well as outputting the area of a parallelogram spanned by those two vectors (equal to their cross product). It also calculates, from the dot product, the angle between the vectors.</p><br><br>
+	<p><strong>How it works:</strong> since both the formulas for the dot and cross products contain the product of the magnitudes of the vectors, that is first calculated using the distance formula in three dimensions. The dot product is then calculated using coordinates - yielding the cosine value by diving the dot product by the product of magnitudes. Next, the cross product magnitude is calculated with the distance formula and the raw numbers [y1 * z2 - y2 * z1, z1 * x2 - z2 * x1, x1 * y2 - x2 * y1]. This value is equal to the area of a parallelogram formed by the vectors. Furthermore, the sine value of the angle is calculated by dividing the cross product's magnitude by the product of the magnitudes of the vectors (this can be calculated from the cosine value, but this just shows another method). The angle is calculated using the cosine value since it always outputs a number between 0 and 180 degrees, and since sin(x) = sin(180 - x) in degrees, there would be ambiguities for whether or not the angle was acute or obtuse if only the sine value was used.</p><br><br>
+	<p>Enter the x coordinate of the first vector:  </p><input type="text" id="x1"><br><br>
+	<p>Enter the y coordinate of the first vector:  </p><input type="text" id="y1"><br><br>
+	<p>Enter the z coordinate of the first vector:  </p><input type="text" id="z1"><br><br>
+	<p>Enter the x coordinate of the second vector:  </p><input type="text" id="x2"><br><br>
+	<p>Enter the y coordinate of the second vector:  </p><input type="text" id="y2"><br><br>
+	<p>Enter the z coordinate of the second vector:  </p><input type="text" id="z2"><br><br>
+	<button onclick="calculate()">Submit</button><br><br>
+    <script src="./main.js"></script>
+	<span id="final1"></span><br><br>
+	<span id="final2"></span><br><br>
+	<span id="final3"></span><br><br>
+	<span id="final4"></span><br><br>
+	<span id="final5"></span><br><br>
+	<span id="final6"></span>
+</body>
+</html>
